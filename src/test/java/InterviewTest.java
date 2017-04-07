@@ -1,6 +1,3 @@
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
-
 import java.net.URL;
 
 /**
@@ -12,7 +9,14 @@ public class InterviewTest {
         URL geckoDriver = InterviewTest.class.getResource("/geckodriver.exe");
         System.setProperty("webdriver.gecko.driver", geckoDriver.getPath());
 
-        WebDriver driver = new FirefoxDriver();
-        driver.get("http://www.google.com");
+        //Instantiate a new webdriver
+
+        //Navigate to "https://promos.betfair.com"
+
+        //Click on Arcade in the black subnavigation bar
+
+        //Click on second promotion
+
+        //Verify the name of the promotion
     }
 }
