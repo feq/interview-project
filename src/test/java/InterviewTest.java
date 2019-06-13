@@ -1,13 +1,21 @@
-import java.net.URL;
+import java.io.File;
+import java.nio.file.Path;
 
 /**
  * Created by FecheteP on 2/24/2017.
  */
 public class InterviewTest {
 
+
+    private void setSpeed(Long viteza) {
+
+    }
+
+
     public static void main(String[] args) {
-        URL chromeDriver = InterviewTest.class.getResource("/chromedriver.exe");
-        System.setProperty("webdriver.chrome.driver", chromeDriver.getPath());
+        String driverName = System.getProperty("os.name").contains("Windows") ? "chromedriver.exe" : "chromedriver";
+        Path chromeDriverPath = new File("src/main/resources/" + driverName).toPath();
+        System.setProperty("webdriver.chrome.driver", chromeDriverPath.toString());
 
         //1. Instantiate a new webdriver of type ChromeDriver
 
